@@ -22,4 +22,22 @@ describe Solver do
       expect(solver.reverse('hello')).to eq('olleh')
     end
   end
+  
+  describe 'fizzbuzz' do
+    it 'returns fizz when argument passed is divisible by 3' do
+      expect(solver.fizzbuzz(3)).to eq('fizz')
+    end
+    it 'returns buzz when argument passed is divisible by 5' do
+      expect(solver.fizzbuzz(5)).to eq('buzz')
+    end
+    it 'returns fizzbuzz when argument passed is divisible by 3 & 5' do
+      expect(solver.fizzbuzz(15)).to eq('fizzbuzz')
+    end
+    it 'returns n as a string when argument passed is neither divisible by 3 nor 5' do
+      expect(solver.fizzbuzz(7)).to eq('7')
+    end
+    it 'returns n as a string when argument passed is neither divisible by 3 nor 5' do
+      expect(solver.fizzbuzz(7)).not_to eq(7)
+    end
+  end
 end
